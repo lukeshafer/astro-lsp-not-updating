@@ -8,7 +8,8 @@
   - Haven't had a chance to test my Mac yet, and can't get the LSP to work at all on Windows proper, which is its own problem and probably my lack of experience with Windows.
 - **Neovim plugin versions**: see `nvim/lazy-lock.json`
 
-[Example video](https://github.com/lukeshafer/astro-lsp-not-updating/raw/main/astro-lsp-demo.mp4)
+https://github.com/lukeshafer/astro-lsp-not-updating/assets/35978568/ae09a321-b705-4ec5-a49d-efe0e26fd986
+
 
 ## The issue
 In Neovim, the Astro LSP does not seem to recognize changes made in .astro files after opening the editor, IF the file is a dynamic route.
