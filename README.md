@@ -3,14 +3,17 @@
 - **Neovim version:** 0.9.5
 - **Astro LSP version (globally installed)**: 2.8.4
 - **Astro version**: 4.6.x
+- **OS**: Arch Linux 
+  - tested on a standarch Arch installation and WSL 2. 
+  Haven't had a chance to test MacOS yet, can't get the LSP to work at all on Windows proper, which I'm assuming is a skill issue on my end)
 
 ## The issue
 In Neovim, the LSP does not recognize changes made in .astro files with dynamic route names, within a session.
 For example, `index.astro` works, but `[param].astro` does not.
 For updates to register, you must restart the language server or Neovim itself, or the LSP will act like the file never changed.
 
-Right now I'm unsure if the issue is with Neovim, the lspconfig, or astro-ls itself -- hoping to narrow it down.
-This problem doesn't occur in VSCode
+Right now I'm unsure if the issue is with my environment, Neovim, the lspconfig, or astro-ls itself 
+-- hoping to narrow it down. This problem doesn't occur in VSCode.
 
 ## To recreate:
 - Place the provided `nvim/` directory in the `$HOME/.config` directory, or wherever is required to config your Neovim installation
