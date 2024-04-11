@@ -1,0 +1,29 @@
+---
+// To recreate:
+// Wait for LSP to load
+// Swap lines 11 and 12
+// Note that the LSP gives a handful of errors, such as
+//     `Variable 'name' is used before being assigned.`
+// After reordering, if you press K over `longName`
+//      (or use command `:lua vim.lsp.buf.hover()`)
+//      you will see `let longName: string`
+
+let name = "Astro!"; // move me down 1 line
+let longName = name + name; // move me up 1 line
+
+console.log(longName);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>{name}</h1>
+		<h2>{longName}</h2>
+	</body>
+</html>
